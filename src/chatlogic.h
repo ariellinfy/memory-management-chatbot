@@ -17,7 +17,9 @@ private:
     ////
 
     // data handles (owned)
-    std::vector<GraphNode *> _nodes;
+    // std::vector<GraphNode *> _nodes;
+    // task 3: make nodes exclusively owned by ChatLogic
+    std::vector<std::unique_ptr<GraphNode>> _nodes;
     std::vector<GraphEdge *> _edges;
 
     ////

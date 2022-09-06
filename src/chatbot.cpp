@@ -51,15 +51,15 @@ ChatBot::ChatBot(const ChatBot &source)             // 2 : copy constructor
 
     _image = new wxBitmap();
     *_image = *source._image;
-    _currentNode = new GraphNode(0);
-    *_currentNode = *source._currentNode;
-    _rootNode = new GraphNode(0);
-    *_rootNode = *source._rootNode;
-    _chatLogic = new ChatLogic();
-    *_chatLogic = *source._chatLogic;
-    // _currentNode = source._currentNode;
-    // _rootNode = source._rootNode;
-    // _chatLogic = source._chatLogic;
+    // _currentNode = new GraphNode(0);
+    // *_currentNode = *source._currentNode;
+    // _rootNode = new GraphNode(0);
+    // *_rootNode = *source._rootNode;
+    // _chatLogic = new ChatLogic();
+    // *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
 }
 
 ChatBot &ChatBot::operator=(const ChatBot &source)  // 3 : copy assignment operator
@@ -71,15 +71,15 @@ ChatBot &ChatBot::operator=(const ChatBot &source)  // 3 : copy assignment opera
     
     _image = new wxBitmap();
     *_image = *source._image;
-    _currentNode = new GraphNode(0);
-    *_currentNode = *source._currentNode;
-    _rootNode = new GraphNode(0);
-    *_rootNode = *source._rootNode;
-    _chatLogic = new ChatLogic();
-    *_chatLogic = *source._chatLogic;
-    // _currentNode = source._currentNode;
-    // _rootNode = source._rootNode;
-    // _chatLogic = source._chatLogic;
+    // _currentNode = new GraphNode(0);
+    // *_currentNode = *source._currentNode;
+    // _rootNode = new GraphNode(0);
+    // *_rootNode = *source._rootNode;
+    // _chatLogic = new ChatLogic();
+    // *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._rootNode;
+    _chatLogic = source._chatLogic;
 
     return *this;
 }
