@@ -11,6 +11,8 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
+    // Segmentation fault due to duplicated chatbot deallocation
+    // chatbot allocates and deallocates in chatlogic, graphnode just contains a copy of it (ie. pointing to the same memory address)
     // delete _chatBot; 
 
     ////
